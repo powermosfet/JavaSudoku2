@@ -3,11 +3,12 @@ package com.liseth.javaSudoku2;
 class PencilMarkGrid
 {
 	public PencilMarkGrid(char[] tokens){
+		_availableTokens = tokens;
 	}
 
-	private char[][][] _pencilMarks;
+	private char[] _availableTokens;
 
 	public int GetSize(){
-		return 0;
+		return _availableTokens.length;
 	}
 }
