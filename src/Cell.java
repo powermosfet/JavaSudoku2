@@ -1,10 +1,12 @@
 package com.liseth.javaSudoku2;
 
+import java.util.*;
+
 class Cell
 {
-	public Cell(char[] tokens){
-		_possible = tokens;
+	public Cell(List<Character> tokens){
+		_possible = new ArrayList<Character>(tokens);
 	}
 
-	private ArrayList<char> _possible;
+	private List<Character> _possible;
 }
