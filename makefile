@@ -20,5 +20,4 @@ clean :
 		$(JAVAC) $(JAVACFLAGS) $<
 
 test: all $(testClasses)
-	echo $(testClasses)
 	$(JAVA) $(JAVAFLAGS) $(JUNIT) $(addprefix $(PACKAGE).,$(notdir $(basename $(testClasses))))
