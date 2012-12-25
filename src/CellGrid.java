@@ -4,17 +4,27 @@ import java.util.*;
 
 class CellGrid
 {
-	public CellGrid(char[] tokens){
-		_availableTokens = tokens;
+	public CellGrid(SymbolSet sym){
+		int n = sym.size();
+		cells = new Cell[n][n];
+		for(Cell[] row:cells){
+			for(Cell c:row){
+				c = new Cell(sym);
+			}
+		}
 	}
 
-	private char[] _availableTokens;
+	private Cell[][] cells;
 
 	public int size(){
-		return _availableTokens.length;
+		return cells.length;
 	}
 
 	public List<CellArray> rows(){
-		return null;
+		List<CellArray> r = new ArrayList<CellArray>();
+		for(Cell[] row:cells){
+			r.add(new CellArray(row));
+		}
+		return r;
 	}
 }

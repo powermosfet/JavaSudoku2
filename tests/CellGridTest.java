@@ -15,8 +15,8 @@ import java.util.*;
 @RunWith(JUnit4.class)
 public class CellGridTest {
 	private CellGrid stdGrid(){
-		char[] tokens = {'1','2','3','4','5','6','7','8','9'};
-		return new CellGrid(tokens);
+		SymbolSet sym = SymbolSet.std9();
+		return new CellGrid(sym);
 	}
 
 	@Test

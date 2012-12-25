@@ -11,7 +11,8 @@ classes = $(sources:.java=.class)
 testSources = $(wildcard tests/*.java)
 testClasses = $(subst .java,.class,$(testSources))
 
-all: $(classes)
+all: $(sources)
+		$(JAVAC) $(JAVACFLAGS) $?
 
 clean :
 		rm -v `find -type f -name *.class`
@@ -19,5 +20,6 @@ clean :
 %.class : %.java
 		$(JAVAC) $(JAVACFLAGS) $<
 
-test: all $(testClasses)
-	$(JAVA) $(JAVAFLAGS) $(JUNIT) $(addprefix $(PACKAGE).,$(notdir $(basename $(testClasses))))
+test: all $(testSources)
+		$(JAVAC) $(JAVACFLAGS) $(testSources)
+	    $(JAVA) $(JAVAFLAGS) $(JUNIT) $(addprefix $(PACKAGE).,$(notdir $(basename $(testClasses))))
