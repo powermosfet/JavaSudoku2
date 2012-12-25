@@ -10,11 +10,11 @@ class CellGrid
 
 	private char[] _availableTokens;
 
-	public int GetSize(){
+	public int size(){
 		return _availableTokens.length;
 	}
 
-	public List<CellArray> Rows(){
+	public List<CellArray> rows(){
 		return null;
 	}
 }
