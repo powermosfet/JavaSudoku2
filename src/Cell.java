@@ -14,6 +14,8 @@ class Cell
 {
 	public Cell(SymbolSet sym, CellArray  row, CellArray column){
 		pencilMarks = new ArrayList<Character>(sym);
+		row.add(this);
+		column.add(this);
 		this. rowRef = row;
 		this.columnRef = column;
 	}

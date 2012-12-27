@@ -16,9 +16,9 @@ class CellGrid
 		int size = sym.size();
 		rowList = getCellArrayList(size);
 		columnList = getCellArrayList(size);
-		for(int r = 0; r < size; r++) {
-			for(int c = 0; c < size; c++) {
-
+		for(CellArray row:rowList) {
+			for(CellArray col:columnList) {
+				cells.add(new Cell(sym, row, col));
 			}
 		}
 	}
@@ -32,9 +32,9 @@ class CellGrid
 	}
 
 	private List<CellArray> getCellArrayList(int size) {
-		List<CellArray> r = new ArrayList<CellArray>(size);
-		for(CellArray ca:r) {
-			ca = new CellArray();
+		List<CellArray> r = new ArrayList<CellArray>();
+		for(int i=0; i<size; i++) {
+			r.add(new CellArray());
 		}
 		return r;
 	}
