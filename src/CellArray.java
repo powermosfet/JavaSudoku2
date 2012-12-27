@@ -4,9 +4,7 @@ import java.util.*;
 
 class CellArray extends ArrayList<Cell>
 {
-	public CellArray(Cell[] cells) {
-		for(Cell c:cells){
-			add(c);
-		}
+	public CellArray() {
+		super();
 	}
 }

@@ -17,7 +17,7 @@ public class SymbolSetTest {
 
 	@Test
 	public void DefaultSet() {
-		SymbolSet s = SymbolSet.std9();
+		SymbolSet s = SymbolSet.std(StandardSizes.NINE);
 		assertEquals("Size", 9, s.size());
 	}
 }
