@@ -11,21 +11,25 @@ import java.util.*;
 */
 class CellGrid
 {
-	public CellGrid(SymbolSet sym) {
+	public CellGrid(SymbolSet sym, BlockMap blockMap) {
 		cells = new ArrayList<Cell>();
 		int size = sym.size();
 		rowList = getCellArrayList(size);
 		columnList = getCellArrayList(size);
+		//Populate cell list
 		for(CellArray row:rowList) {
 			for(CellArray col:columnList) {
 				cells.add(new Cell(sym, row, col));
 			}
 		}
+		//Define blocks
+		blockList = blockMap.getBlockList(this);
 	}
 
 	private List<Cell> cells;
 	private List<CellArray> rowList;
 	private List<CellArray> columnList;
+	private List<CellArray> blockList;
 
 	public Cell get(int row, int column) {
 		return rowList.get(row).get(column);
@@ -49,5 +53,9 @@ class CellGrid
 
 	public List<CellArray> columns() {
 		return columnList;
+	}
+
+	public List<CellArray> blocks() {
+		return blockList;
 	}
 }

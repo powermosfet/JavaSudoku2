@@ -36,4 +36,9 @@ class Cell
 	public CellArray block() {
 		return blockRef;
 	}
+
+	public void setBlock(CellArray block) {
+		blockRef = block;
+		block.add(this);
+	}
 }
