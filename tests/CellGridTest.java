@@ -16,8 +16,8 @@ import java.util.*;
 public class CellGridTest {
 
 	private CellGrid stdGrid(){
-		SymbolSet sym = SymbolSet.std(StandardSizes.NINE);
-		BlockMap bm = BlockMap.std(StandardSizes.NINE);
+		SymbolSet sym = SymbolSet.std(StandardSize.NINE);
+		BlockMap bm = BlockMap.std(StandardSize.NINE);
 		return new CellGrid(sym, bm);
 	}
 

@@ -4,7 +4,7 @@ import java.util.*;
 
 class SymbolSet extends ArrayList<Character>
 {
-	public static SymbolSet std(StandardSizes size){
+	public static SymbolSet std(StandardSize size){
 		List<Character> symbols = new ArrayList<Character>();
 		switch(size) {
 			case NINE:

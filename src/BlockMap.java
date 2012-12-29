@@ -12,7 +12,7 @@ import java.util.*;
 */
 class BlockMap
 {
-	public static BlockMap std(StandardSizes size) {
+	public static BlockMap std(StandardSize size) {
 		BlockMap r = new BlockMap();
 		switch(size) {
 			case NINE:

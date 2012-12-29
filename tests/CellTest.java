@@ -15,8 +15,8 @@ import java.util.*;
 @RunWith(JUnit4.class)
 public class CellTest {
 	private CellGrid stdGrid(){
-		SymbolSet sym = SymbolSet.std(StandardSizes.NINE);
-		BlockMap map = BlockMap.std(StandardSizes.NINE);
+		SymbolSet sym = SymbolSet.std(StandardSize.NINE);
+		BlockMap map = BlockMap.std(StandardSize.NINE);
 		CellGrid cg = new CellGrid(sym, map);
 		return cg;
 	}

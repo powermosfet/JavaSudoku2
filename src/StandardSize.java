@@ -5,7 +5,7 @@ package com.liseth.javaSudoku2;
 * 
 * @author asmundliseth@gmail.com (Asmund Liseth)
 */
-enum StandardSizes
+enum StandardSize
 {
 	NINE
 }
