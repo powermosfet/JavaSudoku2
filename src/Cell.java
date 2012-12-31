@@ -41,4 +41,8 @@ class Cell
 		blockRef = block;
 		block.add(this);
 	}
+
+	public CellArray friends() {
+		return null;
+	}
 }
