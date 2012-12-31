@@ -14,7 +14,6 @@ import java.util.*;
 */
 @RunWith(JUnit4.class)
 public class SymbolSetTest {
-
 	@Test
 	public void defaultSet() {
 		SymbolSet s = SymbolSet.std(StandardSize.NINE);
