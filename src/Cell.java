@@ -42,7 +42,18 @@ class Cell
 		block.add(this);
 	}
 
+	public void define(Character c) {
+	}
+
 	public CellArray friends() {
+		return null;
+	}
+
+	public boolean isDefined() {
+		return false;
+	}
+
+	public Character definedValue() {
 		return null;
 	}
 }

@@ -56,4 +56,13 @@ public class CellTest {
 			}
 		}
 	}
+
+	@Test
+	public void define() {
+		CellGrid g = Std.grid();
+		Cell c = g.get(3, 4);
+		c.define('3');
+		assertTrue(c.isDefined());
+		assertEquals("DefinedValueIs3", c.definedValue(), new Character('3'));
+	}
 }

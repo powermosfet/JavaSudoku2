@@ -31,10 +31,6 @@ class CellGrid
 	private List<CellArray> columnList;
 	private List<CellArray> blockList;
 
-	public Cell get(int row, int column) {
-		return rowList.get(row).get(column);
-	}
-
 	private List<CellArray> getCellArrayList(int size) {
 		List<CellArray> r = new ArrayList<CellArray>();
 		for(int i=0; i<size; i++) {
@@ -43,19 +39,39 @@ class CellGrid
 		return r;
 	}
 
+	public Cell get(int row, int column) {
+		return rowList.get(row).get(column);
+	}
+
 	public int size() {
 		return rowList.size();
+	}
+
+	public CellArray all() {
+		return null;
 	}
 
 	public List<CellArray> rows() {
 		return rowList;
 	}
 
+	public CellArray row(int index) {
+		return null;
+	}
+
 	public List<CellArray> columns() {
 		return columnList;
 	}
 
+	public CellArray column(int index) {
+		return null;
+	}
+
 	public List<CellArray> blocks() {
 		return blockList;
+	}
+
+	public CellArray block(int index) {
+		return null;
 	}
 }

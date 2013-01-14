@@ -7,4 +7,8 @@ class CellArray extends ArrayList<Cell>
 	public CellArray() {
 		super();
 	}
+
+	public CellArray unfinished() {
+		return null;
+	}
 }

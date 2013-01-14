@@ -17,8 +17,18 @@ public class CellArrayTest {
 	@Test
 	public void contains(){
 		CellGrid g = Std.grid();
-		CellArray column = g.columns().get(3);
+		CellArray column = g.column(3);
 		assertTrue(column.contains(g.get(5, 3)));
 		assertFalse(column.contains(g.get(3, 2)));
+	}
+
+	@Test
+	public void returnUnfinished() {
+		CellGrid g = Std.grid();
+		Cell finishedCell = g.get(3, 7);
+		finishedCell.define('1');
+		CellArray unfinished = g.all().unfinished();
+		assertEquals("SizeIs80", unfinished.size(), 80);
+		assertFalse(unfinished.contains(finishedCell));
 	}
 }
